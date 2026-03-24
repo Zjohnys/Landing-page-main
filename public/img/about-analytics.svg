@@ -1,0 +1,69 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="analyticsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f9ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2b5876;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3c72;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#45a049;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="500" height="500" fill="url(#analyticsGrad)"/>
+  
+  <!-- Chart/Graph visualization -->
+  <g transform="translate(80, 100)">
+    <!-- Bars -->
+    <g fill="url(#blue)" opacity="0.7">
+      <rect x="0" y="200" width="30" height="80" rx="4"/>
+      <rect x="45" y="140" width="30" height="140" rx="4"/>
+      <rect x="90" y="80" width="30" height="200" rx="4"/>
+      <rect x="135" y="120" width="30" height="160" rx="4"/>
+      <rect x="180" y="100" width="30" height="180" rx="4"/>
+      <rect x="225" y="150" width="30" height="130" rx="4"/>
+    </g>
+    
+    <!-- Line overlay -->
+    <polyline points="15,200 60,140 105,80 150,120 195,100 240,150" fill="none" stroke="url(#green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Dots on line -->
+    <g fill="url(#green)">
+      <circle cx="15" cy="200" r="5"/>
+      <circle cx="60" cy="140" r="5"/>
+      <circle cx="105" cy="80" r="5"/>
+      <circle cx="150" cy="120" r="5"/>
+      <circle cx="195" cy="100" r="5"/>
+      <circle cx="240" cy="150" r="5"/>
+    </g>
+    
+    <!-- Axis lines -->
+    <line x1="0" y1="300" x2="280" y2="300" stroke="url(#blue)" stroke-width="2" opacity="0.3"/>
+    <line x1="0" y1="10" x2="0" y2="300" stroke="url(#blue)" stroke-width="2" opacity="0.3"/>
+  </g>
+  
+  <!-- Percentage indicator -->
+  <g transform="translate(350, 150)">
+    <circle cx="0" cy="0" r="45" fill="none" stroke="url(#blue)" stroke-width="3" opacity="0.2"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="url(#green)" stroke-width="4" stroke-dasharray="141.37" stroke-dashoffset="35.34" stroke-linecap="round"/>
+    <text x="0" y="12" font-size="32" font-weight="bold" fill="url(#green)" text-anchor="middle">75%</text>
+  </g>
+  
+  <!-- Info cards -->
+  <g transform="translate(60, 360)">
+    <g>
+      <rect x="0" y="0" width="80" height="60" rx="8" fill="white" stroke="url(#blue)" stroke-width="2" opacity="0.8"/>
+      <text x="40" y="20" font-size="14" font-weight="bold" fill="url(#blue)" text-anchor="middle">Receita</text>
+      <text x="40" y="42" font-size="18" font-weight="bold" fill="url(#green)" text-anchor="middle">+32%</text>
+    </g>
+    <g transform="translate(110, 0)">
+      <rect x="0" y="0" width="80" height="60" rx="8" fill="white" stroke="url(#blue)" stroke-width="2" opacity="0.8"/>
+      <text x="40" y="20" font-size="14" font-weight="bold" fill="url(#blue)" text-anchor="middle">Vendas</text>
+      <text x="40" y="42" font-size="18" font-weight="bold" fill="url(#green)" text-anchor="middle">248</text>
+    </g>
+  </g>
+</svg>
